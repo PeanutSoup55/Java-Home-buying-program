@@ -16,6 +16,8 @@ public class Main {
         System.out.println("1. Make House");
         System.out.println("2. Display Houses");
         System.out.println("3. Make Realtor");
+        System.out.println("4. Add Realtor to House Listing");
+        System.out.println("5. Add Buyer");
         
 
     }
