@@ -40,6 +40,7 @@ public class Main {
                     System.out.println("\nMaking Buyer...\n");
                     break;
                 case 6:
+                    System.out.println("Exiting Program...");
                     System.exit(0);
                     break;
                 default:
@@ -51,14 +52,22 @@ public class Main {
     }
 
     public static void MakeHome(){
-        System.out.print("Enter ID: ");
-        int id = s.nextInt();
-        System.out.print("\nEnter Price: ");
-        double price = s.nextDouble();
-        System.out.print("\nEnter location: ");
-        String loca = s.nextLine();
-        House house = new House(id, price, loca);
-        houses.add(house);
+        int count;
+        System.out.print("Enter number of new Houses: ");
+        count = s.nextInt();
+        for(int i = 0; i < count; i++){
+            System.out.print("Enter ID: ");
+            int id = s.nextInt();
+            System.out.print("Enter Price: ");
+            double price = s.nextDouble();
+            s.nextLine();
+            System.out.print("Enter location: ");
+            String loca = s.nextLine();
+            House house = new House(id, price, loca);
+            houses.add(house);
+            System.out.println("=== House Added ===");
+            System.out.println("\n ID: " + id + "\n Price: " + price + "\n Adress: " + loca + "\n");
+        }
     }
 
     public static void main(String[] args) {
