@@ -15,7 +15,7 @@ public class Main {
     public static void displayMenu(){
         int choice;
         do  { 
-            System.out.println("==== Menu ====");
+            System.out.println("\n\n==== Menu ====");
             System.out.println("1. Make House");
             System.out.println("2. Display Houses");
             System.out.println("3. Make Realtor");
@@ -30,6 +30,7 @@ public class Main {
                     break;
                 case 2:
                     System.out.println("\n==== House List ====\n");
+                    DisplayHomes();
                     break;
                 case 3:
                     System.out.println("\nMaking Realtor...\n");
@@ -66,8 +67,19 @@ public class Main {
             House house = new House(id, price, loca);
             houses.add(house);
             System.out.println("\n=== House Added ===");
-            System.out.println("\n ID: " + id + "\n Price: " + price + "\n Adress: " + loca + "\n");
+            house.PrintDets();
             System.out.println("===================\n");
+        }
+    }
+
+    public static void DisplayHomes(){
+        if (houses.isEmpty()){
+            System.out.println("No Houses ¯\\_(ツ)_/¯");
+            return;
+        }
+        for (int i = 0; i < houses.size(); i++){
+            House house = houses.get(i);
+            house.PrintDets();
         }
     }
 
