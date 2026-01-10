@@ -21,14 +21,15 @@ public class Main {
             System.out.println("3. Make Realtor");
             System.out.println("4. Add Realtor to House Listing");
             System.out.println("5. Add Buyer");
+            System.out.println("6. Exit");
             choice = s.nextInt();
             switch(choice){
                 case 1: 
-                    System.out.println("\nMaking new House...\n");
+                    System.out.println("\n== Making new House ==\n");
                     MakeHome();
                     break;
                 case 2:
-                    System.out.println("\n=== House List ===\n");
+                    System.out.println("\n==== House List ====\n");
                     break;
                 case 3:
                     System.out.println("\nMaking Realtor...\n");
@@ -47,7 +48,6 @@ public class Main {
                     break;
             }
         } while (choice != 0);
-
         s.close();
     }
 
@@ -65,8 +65,9 @@ public class Main {
             String loca = s.nextLine();
             House house = new House(id, price, loca);
             houses.add(house);
-            System.out.println("=== House Added ===");
+            System.out.println("\n=== House Added ===");
             System.out.println("\n ID: " + id + "\n Price: " + price + "\n Adress: " + loca + "\n");
+            System.out.println("===================\n");
         }
     }
 
