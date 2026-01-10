@@ -1,6 +1,7 @@
 package com.example;
 
 import java.util.Scanner;
+import java.util.ArrayList;
 
 /**
  *
@@ -9,6 +10,7 @@ import java.util.Scanner;
 
 public class Main {
     public static Scanner s = new Scanner(System.in);
+    public static ArrayList<House> houses = new ArrayList<House>();
 
     public static void displayMenu(){
         int choice;
@@ -23,6 +25,7 @@ public class Main {
             switch(choice){
                 case 1: 
                     System.out.println("\nMaking new House...\n");
+                    MakeHome();
                     break;
                 case 2:
                     System.out.println("\n=== House List ===\n");
@@ -46,6 +49,11 @@ public class Main {
 
         s.close();
     }
+
+    public static void MakeHome(){
+
+    }
+
     public static void main(String[] args) {
         displayMenu();
     }
