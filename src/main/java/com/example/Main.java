@@ -51,7 +51,14 @@ public class Main {
     }
 
     public static void MakeHome(){
-
+        System.out.print("Enter ID: ");
+        int id = s.nextInt();
+        System.out.print("\nEnter Price: ");
+        double price = s.nextDouble();
+        System.out.print("\nEnter location: ");
+        String loca = s.nextLine();
+        House house = new House(id, price, loca);
+        houses.add(house);
     }
 
     public static void main(String[] args) {
