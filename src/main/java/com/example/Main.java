@@ -11,6 +11,7 @@ import java.util.ArrayList;
 public class Main {
     public static Scanner s = new Scanner(System.in);
     public static ArrayList<House> houses = new ArrayList<House>();
+    public static ArrayList<Realtor> realtors = new ArrayList<>();
 
     public static void displayMenu(){
         int choice;
@@ -81,6 +82,15 @@ public class Main {
             House house = houses.get(i);
             house.PrintDets();
         }
+    }
+
+    public static void LinkRealtor(){
+        if(realtors.isEmpty() || houses.isEmpty()){
+            System.out.println("\nNeed both a populated HOUSE and REALTOR list to do this action\n");
+            return;
+        }
+
+        System.out.println("Select Realtor index (0 - " + realtors.size() + ")");
     }
 
     public static void main(String[] args) {
