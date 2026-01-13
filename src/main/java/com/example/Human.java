@@ -13,11 +13,4 @@ public class Human {
         this.phone = phone;
     }
     
-    public void Introduce(){
-        System.out.println("Hi I'm " + this.name);
-    }
-    
-    public void Tour(){
-        System.out.println("Tour time");
-    }
 }
