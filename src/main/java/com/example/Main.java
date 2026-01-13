@@ -84,13 +84,52 @@ public class Main {
         }
     }
 
+    public static void MakeRealtor(){
+        int count;
+        System.out.print("Enter number of new Realtors: ");
+        count = s.nextInt();
+        for(int i = 0; i < count; i++){
+            System.out.print("Enter ID: ");
+            int id = s.nextInt();
+            System.out.print("Enter Price: ");
+            double price = s.nextDouble();
+            s.nextLine();
+            System.out.print("Enter location: ");
+            String loca = s.nextLine();
+            House house = new House(id, price, loca);
+            houses.add(house);
+            System.out.println("\n=== House Added ===");
+            house.PrintDets();
+            System.out.println("===================\n");
+        }
+    }
+
     public static void LinkRealtor(){
         if(realtors.isEmpty() || houses.isEmpty()){
             System.out.println("\nNeed both a populated HOUSE and REALTOR list to do this action\n");
             return;
         }
 
-        System.out.println("Select Realtor index (0 - " + realtors.size() + ")");
+        System.out.print("Select Realtor index (0 - " + (realtors.size()-1) + "): ");
+        int rIndex = s.nextInt();
+
+        System.out.print("Select House ID to assign to realtor (0 - " + (houses.size()-1) + "): ");
+        int hId = s.nextInt();
+
+        House selectedHouse = null;
+        for(House h : houses){
+            if (h.id == hId){
+                selectedHouse = h;
+                break;
+            }
+        }
+
+        if(selectedHouse != null && rIndex < realtors.size()){
+            realtors.get(rIndex).addListing(selectedHouse);
+            System.out.println("Success! House " + hId + "added to " + realtors.get(rIndex));
+        }else{
+            System.out.println("Realtor or house not found");
+        }
     }
 
     public static void main(String[] args) {
