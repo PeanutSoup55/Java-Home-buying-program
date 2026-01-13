@@ -8,5 +8,8 @@ public class Realtor extends Human{
         super(id, name, age, phone);
         this.license = license;
     }
-    
+
+    public void addListing(House house){
+        this.listings.add(house);
+    }
 }
