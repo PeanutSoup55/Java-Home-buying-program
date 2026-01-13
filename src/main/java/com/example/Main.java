@@ -15,7 +15,7 @@ public class Main {
     public static void displayMenu(){
         int choice;
         do  { 
-            System.out.println("\n\n==== Menu ====");
+            System.out.println("\n\n======== Menu ========");
             System.out.println("1. Make House");
             System.out.println("2. Display Houses");
             System.out.println("3. Make Realtor");
