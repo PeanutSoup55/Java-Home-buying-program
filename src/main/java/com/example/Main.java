@@ -23,7 +23,7 @@ public class Main {
             System.out.println("4. Add Realtor to House Listing");
             System.out.println("5. Add Buyer");
             System.out.println("6. Realtor Sales List");
-            System.out.println("6. Exit");
+            System.out.println("7. Exit");
             System.out.println("============================");
             choice = s.nextInt();
             switch(choice){
@@ -172,6 +172,8 @@ public class Main {
             System.out.println("-------------------------");
         }
     }
+
+    
 
     public static void main(String[] args) {
         displayMenu();
