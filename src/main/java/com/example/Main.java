@@ -24,7 +24,8 @@ public class Main {
             System.out.println("4. Add Realtor to House Listing");
             System.out.println("5. Add Buyer");
             System.out.println("6. Realtor Sales List");
-            System.out.println("7. Exit");
+            System.out.println("7. Sold Houses");
+            System.out.println("8. Exit");
             System.out.println("============================");
             choice = s.nextInt();
             switch(choice){
@@ -53,6 +54,10 @@ public class Main {
                     HomeListRealtor();
                     break;
                 case 7:
+                    System.out.println("Displaying Sold Houses");
+                    SoldList();
+                    break;
+                case 8:
                     System.out.println("Exiting Program...");
                     System.exit(0);
                     break;
@@ -213,6 +218,17 @@ public class Main {
             System.out.println("\n=== Buyer Added ===");
             b1.BuyerStat(); 
             System.out.println("===================\n");
+        }
+    }
+
+    public static void SoldList(){
+        for (House h: houses){
+            if (h.sold == false){
+                System.out.println("No sold houses!");
+            } else {
+                System.out.println("    ");
+                h.PrintDets();
+            }
         }
     }
     
