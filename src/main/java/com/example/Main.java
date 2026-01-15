@@ -22,6 +22,7 @@ public class Main {
             System.out.println("3. Make Realtor");
             System.out.println("4. Add Realtor to House Listing");
             System.out.println("5. Add Buyer");
+            System.out.println("6. Realtor Sales List");
             System.out.println("6. Exit");
             System.out.println("============================");
             choice = s.nextInt();
@@ -46,6 +47,10 @@ public class Main {
                     System.out.println("\nMaking Buyer...\n");
                     break;
                 case 6:
+                    System.out.println("List of Realtors and their Houses for sale");
+                    HomeListRealtor();
+                    break;
+                case 7:
                     System.out.println("Exiting Program...");
                     System.exit(0);
                     break;
@@ -149,6 +154,23 @@ public class Main {
             System.out.println("Success! House " + hId + " added to " + realtors.get(rIndex).getName());
         }
         
+    }
+
+    public static void HomeListRealtor(){
+        for(Realtor r: realtors){
+            System.out.println("Realtor: " + r.getName());
+            ArrayList<House> listings = r.getListings();
+            if(listings.isEmpty()){
+                System.out.println("XXXXXXXXXXXX");
+            } else {
+                System.out.println("  Listings:");
+                for (House h : houses){
+                    System.out.println("    ");
+                    h.PrintDets();
+                }
+            }
+            System.out.println("-------------------------");
+        }
     }
 
     public static void main(String[] args) {

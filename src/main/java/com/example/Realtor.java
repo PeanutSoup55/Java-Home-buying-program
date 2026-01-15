@@ -13,6 +13,10 @@ public class Realtor extends Human{
         this.listings.add(house);
     }
 
+    public ArrayList<House> getListings(){
+        return listings;
+    }
+
     public void PrintDets(){
         System.out.println("name: " + this.name );
     }
