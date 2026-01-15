@@ -91,8 +91,8 @@ public class Main {
         for(int i = 0; i < count; i++){
             System.out.print("Enter ID: ");
             int id = s.nextInt();
-            System.out.print("Enter Price: ");
-            double price = s.nextDouble();
+            System.out.print("Enter Name: ");
+            double name = s.nextDouble();
             s.nextLine();
             System.out.print("Enter location: ");
             String loca = s.nextLine();
