@@ -182,43 +182,39 @@ public class Main {
     }
 
     public static void MakeBuyer() {
-        System.out.print("Enter number of new Buyers: ");
-        int count = s.nextInt();
+        
+        System.out.print("Enter ID: ");
+        int id = s.nextInt();
         s.nextLine(); 
-    
-        for (int i = 0; i < count; i++) {
-            System.out.print("Enter ID: ");
-            int id = s.nextInt();
-            s.nextLine(); 
-    
-            System.out.print("Enter Name: ");
-            String name = s.nextLine();
-    
-            System.out.print("Enter Age: ");
-            int age = s.nextInt();
-            s.nextLine(); 
-    
-            System.out.print("Enter Phone Number: ");
-            String phone = s.nextLine();
-    
-            System.out.print("Enter Total Budget: ");
-            double budget = s.nextDouble();
-    
-            System.out.print("Enter Minimum House Price: ");
-            double min = s.nextDouble();
-    
-            System.out.print("Enter Maximum House Price: ");
-            double max = s.nextDouble();
-            s.nextLine(); 
-    
-            Buyer b1 = new Buyer(id, name, age, phone, budget, min, max);
-            
-            buyers.add(b1);
-    
-            System.out.println("\n=== Buyer Added ===");
-            b1.BuyerStat(); 
-            System.out.println("===================\n");
-        }
+
+        System.out.print("Enter Name: ");
+        String name = s.nextLine();
+
+        System.out.print("Enter Age: ");
+        int age = s.nextInt();
+        s.nextLine(); 
+
+        System.out.print("Enter Phone Number: ");
+        String phone = s.nextLine();
+
+        System.out.print("Enter Total Budget: ");
+        double budget = s.nextDouble();
+
+        System.out.print("Enter Minimum House Price: ");
+        double min = s.nextDouble();
+
+        System.out.print("Enter Maximum House Price: ");
+        double max = s.nextDouble();
+        s.nextLine(); 
+
+        Buyer b1 = new Buyer(id, name, age, phone, budget, min, max);
+        
+        buyers.add(b1);
+
+        System.out.println("\n=== Buyer Added ===");
+        b1.BuyerStat(); 
+        System.out.println("===================\n");
+        
     }
 
     public static void SoldList(){
