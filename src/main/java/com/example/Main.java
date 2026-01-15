@@ -93,10 +93,13 @@ public class Main {
             int id = s.nextInt();
             System.out.print("Enter Name: ");
             String name = s.nextLine();
-            s.nextLine();
             System.out.print("Enter Age: ");
             int age = s.nextInt();
-            Realtor r1 = new Realtor(id, name, age, );
+            System.out.println("Enter Phone Number: ");
+            String phone = s.nextLine();
+            System.out.println("Enter License: ");
+            String lic = s.nextLine();
+            Realtor r1 = new Realtor(id, name, age, phone, lic);
             realtors.add(r1);
             System.out.println("\n=== Realtor Added ===");
             r1.PrintDets();
