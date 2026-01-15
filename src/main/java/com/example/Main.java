@@ -75,7 +75,8 @@ public class Main {
             s.nextLine();
             System.out.print("Enter location: ");
             String loca = s.nextLine();
-            House house = new House(id, price, loca);
+            boolean sold = false;
+            House house = new House(id, price, loca, sold);
             houses.add(house);
             System.out.println("\n=== House Added ===");
             house.PrintDets();
