@@ -16,28 +16,31 @@ public class Main {
     public static void displayMenu(){
         int choice;
         do  { 
-            System.out.println("\n\n======== Menu ========");
+            System.out.println("\n\n=========== Menu ===========");
             System.out.println("1. Make House");
             System.out.println("2. Display Houses");
             System.out.println("3. Make Realtor");
             System.out.println("4. Add Realtor to House Listing");
             System.out.println("5. Add Buyer");
             System.out.println("6. Exit");
+            System.out.println("============================");
             choice = s.nextInt();
             switch(choice){
                 case 1: 
-                    System.out.println("\n== Making new House ==\n");
+                    System.out.println("\n==== Making new House ====\n");
                     MakeHome();
                     break;
                 case 2:
-                    System.out.println("\n==== House List ====\n");
+                    System.out.println("\n======= House List =======\n");
                     DisplayHomes();
                     break;
                 case 3:
-                    System.out.println("\nMaking Realtor...\n");
+                    System.out.println("\n===== Making Realtor =====\n");
+                    MakeRealtor();
                     break;
                 case 4:
-                    System.out.println("\nAdding Realtor to Listing...\n");
+                    System.out.println("\nAdding Realtor to Listing\n");
+                    LinkRealtor();
                     break;
                 case 5:
                     System.out.println("\nMaking Buyer...\n");
@@ -85,27 +88,37 @@ public class Main {
     }
 
     public static void MakeRealtor(){
-        int count;
         System.out.print("Enter number of new Realtors: ");
-        count = s.nextInt();
+        int count = s.nextInt();
+        s.nextLine(); 
+    
         for(int i = 0; i < count; i++){
             System.out.print("Enter ID: ");
             int id = s.nextInt();
+            s.nextLine(); 
+    
             System.out.print("Enter Name: ");
-            String name = s.nextLine();
+            String name = s.nextLine(); 
+    
             System.out.print("Enter Age: ");
             int age = s.nextInt();
-            System.out.println("Enter Phone Number: ");
-            String phone = s.nextLine();
-            System.out.println("Enter License: ");
-            String lic = s.nextLine();
+            s.nextLine(); 
+    
+            System.out.print("Enter Phone Number: ");
+            String phone = s.nextLine(); 
+    
+            System.out.print("Enter License: ");
+            String lic = s.nextLine(); 
+    
             Realtor r1 = new Realtor(id, name, age, phone, lic);
             realtors.add(r1);
+            
             System.out.println("\n=== Realtor Added ===");
             r1.PrintDets();
             System.out.println("===================\n");
         }
     }
+    
 
     public static void LinkRealtor(){
         if(realtors.isEmpty() || houses.isEmpty()){
@@ -127,12 +140,15 @@ public class Main {
             }
         }
 
-        if(selectedHouse != null && rIndex < realtors.size()){
+        if (selectedHouse == null) {
+            System.out.println("Error: House with ID " + hId + " does not exist.");
+        } else if (rIndex < 0 || rIndex >= realtors.size()) {
+            System.out.println("Error: Realtor index " + rIndex + " is out of range.");
+        } else {
             realtors.get(rIndex).addListing(selectedHouse);
-            System.out.println("Success! House " + hId + "added to " + realtors.get(rIndex));
-        }else{
-            System.out.println("Realtor or house not found");
+            System.out.println("Success! House " + hId + " added to " + realtors.get(rIndex).getName());
         }
+        
     }
 
     public static void main(String[] args) {

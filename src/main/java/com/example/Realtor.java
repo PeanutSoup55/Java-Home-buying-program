@@ -14,6 +14,10 @@ public class Realtor extends Human{
     }
 
     public void PrintDets(){
-        System.out.println("name: " + name );
+        System.out.println("name: " + this.name );
+    }
+
+    public String getName(){
+       return name;
     }
 }
