@@ -164,7 +164,7 @@ public class Main {
                 System.out.println("XXXXXXXXXXXX");
             } else {
                 System.out.println("  Listings:");
-                for (House h : houses){
+                for (House h : listings){
                     System.out.println("    ");
                     h.PrintDets();
                 }
