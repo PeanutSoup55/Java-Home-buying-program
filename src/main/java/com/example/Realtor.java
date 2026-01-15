@@ -12,4 +12,8 @@ public class Realtor extends Human{
     public void addListing(House house){
         this.listings.add(house);
     }
+
+    public void PrintDets(){
+        System.out.println("name: " + name );
+    }
 }

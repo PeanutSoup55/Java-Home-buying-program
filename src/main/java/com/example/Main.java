@@ -92,14 +92,14 @@ public class Main {
             System.out.print("Enter ID: ");
             int id = s.nextInt();
             System.out.print("Enter Name: ");
-            double name = s.nextDouble();
+            String name = s.nextLine();
             s.nextLine();
-            System.out.print("Enter location: ");
-            String loca = s.nextLine();
-            House house = new House(id, price, loca);
-            houses.add(house);
-            System.out.println("\n=== House Added ===");
-            house.PrintDets();
+            System.out.print("Enter Age: ");
+            int age = s.nextInt();
+            Realtor r1 = new Realtor(id, name, age, );
+            realtors.add(r1);
+            System.out.println("\n=== Realtor Added ===");
+            r1.PrintDets();
             System.out.println("===================\n");
         }
     }
