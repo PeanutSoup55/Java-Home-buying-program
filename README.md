@@ -1,29 +1,11 @@
-# 🏠 Java Housing Application
+# Java Housing Application
 
 A home buying calculator application to help users analyze mortgage costs and affordability.
 
-## 📋 Overview
+## Overview
 
 This Java application provides financial calculations for prospective homebuyers. Users can input property details and loan information to receive monthly payment estimates, total interest calculations, and affordability assessments.
 
-## ✨ Planned Features
-
-- **Mortgage Calculator**
-  - Calculate monthly mortgage payments
-  - Estimate total interest over loan term
-  - Analyze different loan scenarios
-
-- **Affordability Assessment**
-  - Determine maximum affordable home price based on income
-  - Calculate debt-to-income ratios
-  - Evaluate down payment requirements
-
-- **Cost Analysis**
-  - Project long-term costs
-  - Compare different loan terms
-  - Visualize payment breakdowns
-
-## 🚀 Getting Started
 
 ### Prerequisites
 
@@ -42,35 +24,17 @@ This Java application provides financial calculations for prospective homebuyers
 
 3. Run the main application file
 
-## 💻 Usage
 
-More details will be added as the application is developed.
-
-## 📊 Development Status
-
-**Current Phase:** Initial Setup
-
-- [x] Repository created
-- [x] Project initialized
-- [ ] Basic mortgage calculator
-- [ ] User input system
-- [ ] Output formatting
-- [ ] Affordability calculator
-- [ ] Testing and refinement
-
-## 🎯 Project Goals
-
-Build a practical, user-friendly tool that simplifies home buying financial decisions through clear calculations and straightforward analysis.
-
-## 👤 Author
+## Author
 
 **PeanutSoup55**
 - GitHub: [@PeanutSoup55](https://github.com/PeanutSoup55)
 
-## 📝 License
+## License
 
 This project is open source and available under the MIT License.
 
 ---
 
 *This README will be updated as development progresses.*
+
